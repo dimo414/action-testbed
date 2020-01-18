@@ -6,6 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    container: dimo414/ci
 
     steps:
     - uses: actions/checkout@v1
