@@ -26,4 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: shellcheck
-      run: bash -c 'shopt -s globstar; shellcheck **/*.sh'
+      run: |
+        pwd
+        find . -name '*.sh'
+        sh -c "find . -name '*.sh' | xargs shellcheck"
