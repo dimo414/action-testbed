@@ -18,3 +18,12 @@ jobs:
         echo test, and deploy your project.
         ls /
         which -a bazel
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    container: dimo414/ci-bash
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: shellcheck
+      run: bash -c 'shopt -s globstar; shellcheck **/*.sh'
