@@ -19,7 +19,7 @@ jobs:
         ls /
         which -a bazel
         mkdir publish
-        date > publish/index.html
+        date > publish/index.md
     - name: Publish
       uses: crazy-max/ghaction-github-pages@v1
       with:
