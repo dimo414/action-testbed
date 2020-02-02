@@ -21,6 +21,8 @@ jobs:
         mkdir publish
         cd publish
         wget https://docs.oracle.com/javase/8/docs/api/index.html
+        echo Hello > foo.md
+        date > date.html
     - name: Publish
       uses: crazy-max/ghaction-github-pages@v1
       with:
