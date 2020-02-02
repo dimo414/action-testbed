@@ -18,6 +18,15 @@ jobs:
         echo test, and deploy your project.
         ls /
         which -a bazel
+        mkdir publish
+        date > publish/index.html
+    - name: Publish
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: gh-pages
+        build_dir: publish
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   shellcheck:
     runs-on: ubuntu-latest
