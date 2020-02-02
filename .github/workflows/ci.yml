@@ -19,7 +19,8 @@ jobs:
         ls /
         which -a bazel
         mkdir publish
-        date > publish/index.html
+        cd publish
+        wget https://docs.oracle.com/javase/8/docs/api/index.html
     - name: Publish
       uses: crazy-max/ghaction-github-pages@v1
       with:
